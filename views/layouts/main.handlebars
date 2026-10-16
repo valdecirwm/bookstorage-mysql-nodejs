@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookStore Manager | Portfólio Dev</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fs-4" href="/">
+                <i class="fa-solid fa-book-bookmark me-2"></i>BookManager <span class="badge bg-primary fs-6 fw-normal">Dev</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium" href="/"><i class="fa-solid fa-house me-1"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-medium" href="/livros"><i class="fa-solid fa-books me-1"></i> Acervo de Livros</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search" method="get" action="/livros/busca">
+                    <input class="form-control me-2" type="search" name="titulo" placeholder="Buscar por título..." aria-label="Search" required/>
+                    <button class="btn btn-outline-primary" type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Conteúdo Dinâmico -->
+    <main class="container my-5 flex-grow-1 fade-in">
+        {{{body}}}
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 text-muted border-top bg-white mt-auto">
+        <div class="container">
+            <p class="mb-0 small">Desenvolvido com Node.js, Express, MySQL Connection Pool & Handlebars 🚀</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <div class="card shadow-lg border-0 overflow-hidden">
+            <div class="row g-0">
+                <div class="col-md-5">
+                    <img src="/images/livro.jpg" class="img-fluid h-100 w-100 object-fit-cover" alt="Livro">
+                </div>
+                <div class="col-md-7 d-flex flex-column">
+                    <div class="card-body p-4 p-md-5 d-flex flex-column h-100">
+                        <h2 class="card-title fw-bold text-dark mb-3">{{livro.titulo}}</h2>
+                        <p class="text-muted flex-grow-1">{{livro.descricao}}</p>
+                        
+                        <ul class="list-unstyled mb-4 small bg-light p-3 rounded-3 border">
+                            <li class="mb-2"><strong><i class="fa-solid fa-user me-2 text-primary"></i>Autor:</strong> {{livro.author}}</li>
+                            <li><strong><i class="fa-solid fa-file-lines me-2 text-primary"></i>Páginas:</strong> {{livro.paginas}}</li>
+                        </ul>
+
+                        <div class="d-flex gap-2 mt-auto">
+                            <a class="btn btn-primary flex-grow-1" href="/livros/editar/{{livro.id}}">
+                                <i class="fa-solid fa-pen-to-square me-1"></i> Editar
+                            </a>
+                            <form class="flex-grow-1 m-0" action="/livros/deletar/{{livro.id}}" method="post" onsubmit="return confirm('Tem certeza que deseja deletar este livro?');">
+                                <button class="btn btn-danger w-100" type="submit">
+                                    <i class="fa-solid fa-trash-can me-1"></i> Deletar
+                                </button>
+                            </form>
+                        </div>
+                        <div class="mt-3 text-center">
+                            <a href="/livros" class="text-decoration-none small text-muted"><i class="fa-solid fa-arrow-left me-1"></i> Voltar ao acervo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

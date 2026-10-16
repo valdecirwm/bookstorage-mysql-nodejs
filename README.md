@@ -21,7 +21,6 @@ Bootstrap 5 & Custom CSS: Interface moderna, totalmente responsiva, estilizada c
 ⚙️ Arquitetura e Estrutura de Pastas
 
 livros-nodejs-connectionpool-mysql/
-│
 ├── db/
 │   └── conn.js          # Módulo exportado de conexão via Connection Pool (.env)
 ├── public/
@@ -31,12 +30,11 @@ livros-nodejs-connectionpool-mysql/
 │       └── livro.jpg    # Ativos estáticos
 ├── views/
 │   ├── layouts/
-│   │   └── main.handlebars  # Layout global (Navbar e Footer)
-│   ├── home.handlebars      # Formulário de cadastro
-│   ├── livros.handlebars    # Listagem e acervo geral
-│   ├── livro.handlebars     # Visualização de item único
+│   │   └── main.handlebars # Layout global (Navbar e Footer)
+│   ├── home.handlebars     # Formulário de cadastro
+│   ├── livros.handlebars   # Listagem e acervo geral
+│   ├── livro.handlebars    # Visualização de item único
 │   └── editarlivro.handlebars # Formulário de edição
-│
 ├── index.js             # Arquivo principal do servidor Express
 ├── package.json         # Dependências do projeto
 └── .env.example         # Exemplo de configuração de variáveis de ambiente
@@ -46,7 +44,7 @@ livros-nodejs-connectionpool-mysql/
 
 Clone o repositório:
 
-git clone https://github.com/seu-usuario/seu-repositorio.git
+git clone https://github.com/valdecirwm/bookstorage-mysql-nodejs
 cd livros-nodejs-connectionpool-mysql
 
 

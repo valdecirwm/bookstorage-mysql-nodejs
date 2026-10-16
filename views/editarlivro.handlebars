@@ -1,0 +1,39 @@
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <div class="card shadow-lg p-4 p-md-5 border-0">
+            <div class="d-flex align-items-center mb-4">
+                <a href="/livros" class="btn btn-outline-secondary btn-sm me-3"><i class="fa-solid fa-arrow-left"></i></a>
+                <div>
+                    <h1 class="fw-bold h3 mb-0">Editar Livro</h1>
+                    <p class="text-muted small mb-0">Modifique os dados do registro no banco de dados.</p>
+                </div>
+            </div>
+
+            <form class="row g-3" action="/livros/editar" method="post">
+                <input type="hidden" name="id" value="{{livro.id}}">
+                
+                <div class="col-md-6">
+                    <label for="titulo" class="form-label text-uppercase text-secondary small fw-bold">Título</label>
+                    <input class="form-control" type="text" name="titulo" id="titulo" value="{{livro.titulo}}" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="author" class="form-label text-uppercase text-secondary small fw-bold">Autor</label>
+                    <input class="form-control" type="text" name="author" id="author" value="{{livro.author}}" required>
+                </div> 
+                <div class="col-md-12">
+                    <label for="paginas" class="form-label text-uppercase text-secondary small fw-bold">Páginas</label>
+                    <input class="form-control" type="number" name="paginas" id="paginas" value="{{livro.paginas}}" required>
+                </div> 
+                <div class="col-12">
+                    <label for="descricao" class="form-label text-uppercase text-secondary small fw-bold">Descrição</label>
+                    <textarea class="form-control" name="descricao" id="descricao" rows="4" required>{{livro.descricao}}</textarea>
+                </div>
+                <div class="col-12 mt-4">
+                    <button type="submit" class="btn btn-primary w-100 py-3 shadow-sm">
+                        <i class="fa-solid fa-check me-2"></i> Salvar Alterações
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

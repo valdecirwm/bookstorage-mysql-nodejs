@@ -1,0 +1,37 @@
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h1 class="fw-bold mb-1">Acervo Cadastrado</h1>
+        <p class="text-muted mb-0">Gerencie, edite ou remova registros do banco de dados MySQL.</p>
+    </div>
+    <a href="/" class="btn btn-primary"><i class="fa-solid fa-plus me-1"></i> Novo Livro</a>
+</div>
+
+{{#if livros.length}}
+    <div class="row g-4">
+        {{#each livros }}
+        <div class="col-md-4">
+            <div class="card h-100 shadow-sm">
+                <img src="/images/livro.jpg" class="card-img-top" alt="Capa do Livro">
+                <div class="card-body d-flex flex-column">
+                    <h5 class="card-title fw-bold text-dark">{{this.titulo}}</h5>
+                    <p class="card-text text-muted small flex-grow-1">{{this.descricao}}</p>
+                    <div class="mb-3">
+                        <span class="badge bg-light text-dark border me-1"><i class="fa-solid fa-file-lines me-1"></i> {{this.paginas}} pgs</span>
+                        <span class="badge bg-light text-dark border"><i class="fa-solid fa-user-pen me-1"></i> {{this.author}}</span>
+                    </div>
+                    <a class="btn btn-outline-primary w-100 mt-auto" href="/livro/{{this.id}}">
+                        <i class="fa-solid fa-eye me-1"></i> Detalhes do Livro
+                    </a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+{{else}}
+    <div class="text-center py-5 bg-white rounded-4 shadow-sm border">
+        <i class="fa-solid fa-books fa-3x text-muted mb-3"></i>
+        <h3>Nenhum livro encontrado</h3>
+        <p class="text-muted">Tente realizar uma nova busca ou cadastre seu primeiro livro.</p>
+        <a href="/" class="btn btn-primary mt-2">Cadastrar Livro</a>
+    </div>
+{{/if}}
